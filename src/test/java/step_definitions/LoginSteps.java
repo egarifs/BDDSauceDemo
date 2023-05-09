@@ -18,7 +18,7 @@ public class LoginSteps {
         loginPage.setUserName(userName);
         loginPage.setPassword(password);
         loginPage.clickLogin();
-        Thread.sleep(5000);
+        Thread.sleep(10000);
 
     }
 }

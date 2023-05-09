@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 10227459085,
+  "duration": 9283638794,
   "status": "passed"
 });
 formatter.scenario({
@@ -26,28 +26,28 @@ formatter.scenario({
 });
 formatter.step({
   "line": 6,
-  "name": "User input \"standard_user\"as userName and input \"secret_sauce\"as password",
+  "name": "User input \"standar_user\"as userName and input \"secret_sauce\"as password",
   "keyword": "When "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "standard_user",
+      "val": "standar_user",
       "offset": 12
     },
     {
       "val": "secret_sauce",
-      "offset": 49
+      "offset": 48
     }
   ],
   "location": "LoginSteps.inputCredential(String,String)"
 });
 formatter.result({
-  "duration": 5651418911,
+  "duration": 10345633336,
   "status": "passed"
 });
 formatter.after({
-  "duration": 168468181,
+  "duration": 121762138,
   "status": "passed"
 });
 });

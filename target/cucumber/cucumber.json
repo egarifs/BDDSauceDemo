@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 10227459085,
+              "duration": 9283638794,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 168468181,
+              "duration": 121762138,
               "status": "passed"
             },
             "match": {
@@ -34,20 +34,20 @@
         "steps": [
           {
             "result": {
-              "duration": 5651418911,
+              "duration": 10345633336,
               "status": "passed"
             },
             "line": 6,
-            "name": "User input \"standard_user\"as userName and input \"secret_sauce\"as password",
+            "name": "User input \"standar_user\"as userName and input \"secret_sauce\"as password",
             "match": {
               "arguments": [
                 {
-                  "val": "standard_user",
+                  "val": "standar_user",
                   "offset": 12
                 },
                 {
                   "val": "secret_sauce",
-                  "offset": 49
+                  "offset": 48
                 }
               ],
               "location": "LoginSteps.inputCredential(String,String)"

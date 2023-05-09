@@ -9,5 +9,8 @@
         <module name="BDDSaucedemo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="BDDSauceDemo" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
