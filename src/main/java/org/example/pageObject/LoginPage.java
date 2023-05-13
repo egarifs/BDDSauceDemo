@@ -11,7 +11,7 @@ public class LoginPage {
 
     public LoginPage(WebDriver driver){
         PageFactory.initElements(driver, this);
-        this.driver = driver;
+        LoginPage.driver = driver;
     }
 
     @FindBy(xpath = "//input[@id='user-name']")
@@ -23,6 +23,13 @@ public class LoginPage {
     @FindBy(xpath = "//input[@id='login-button']")
     private WebElement btnLogin;
 
+    @FindBy(xpath ="//h3")
+    private WebElement errorText;
+
+    public String verifyErrorText(){
+        return errorText.getText();
+    }
+
     public void setUserName(String user){
         userName.sendKeys(user);
     }
@@ -33,6 +40,9 @@ public class LoginPage {
 
     public void clickLogin(){
         btnLogin.click();
+    }
+    public boolean verifyLandingPage(){
+        return userName.isDisplayed();
     }
 
 
