@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="12" failures="0" name="step_definitions.RunCukesTest" time="0.647" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="step_definitions.RunCukesTest" time="0.011" errors="2" skipped="0">
   <properties>
     <property name="idea.version" value="2022.2.4"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -66,16 +66,91 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="| standar_user |  | Epic sadface: Password is required |" name="Given User already on website sauce demo" time="0.002"/>
-  <testcase classname="| standar_user |  | Epic sadface: Password is required |" name="When User input &quot;standar_user&quot; as userName and input &quot;&quot; as password" time="0"/>
-  <testcase classname="| standar_user |  | Epic sadface: Password is required |" name="Then User see error &quot;Epic sadface: Password is required&quot; on login page" time="0"/>
-  <testcase classname="| standar_user |  | Epic sadface: Password is required |" name="| standar_user |  | Epic sadface: Password is required |" time="0.298"/>
-  <testcase classname="|  | secret_sauce | Epic sadface: Username is required |" name="Given User already on website sauce demo" time="0"/>
-  <testcase classname="|  | secret_sauce | Epic sadface: Username is required |" name="When User input &quot;&quot; as userName and input &quot;secret_sauce&quot; as password" time="0"/>
-  <testcase classname="|  | secret_sauce | Epic sadface: Username is required |" name="Then User see error &quot;Epic sadface: Username is required&quot; on login page" time="0.001"/>
-  <testcase classname="|  | secret_sauce | Epic sadface: Username is required |" name="|  | secret_sauce | Epic sadface: Username is required |" time="0.18"/>
-  <testcase classname="| test | test | Epic sadface: Username and password do not match any user in this service |" name="Given User already on website sauce demo" time="0"/>
-  <testcase classname="| test | test | Epic sadface: Username and password do not match any user in this service |" name="When User input &quot;test&quot; as userName and input &quot;test&quot; as password" time="0"/>
-  <testcase classname="| test | test | Epic sadface: Username and password do not match any user in this service |" name="Then User see error &quot;Epic sadface: Username and password do not match any user in this service&quot; on login page" time="0"/>
-  <testcase classname="| test | test | Epic sadface: Username and password do not match any user in this service |" name="| test | test | Epic sadface: Username and password do not match any user in this service |" time="0.166"/>
+  <testcase classname="Scenario: Check when user can checkout the product" name="Given User already on website sauce demo" time="0.003"/>
+  <testcase classname="Scenario: Check when user can checkout the product" name="When User input &quot;standard_user&quot; as userName and input &quot;secret_sauce&quot; as password" time="0"/>
+  <testcase classname="Scenario: Check when user can checkout the product" name="And User Chosess backpack, backlight and click Chart button" time="0.001"/>
+  <testcase classname="Scenario: Check when user can checkout the product" name="And User input &quot;Ega&quot; as first name, &quot;Rijki&quot; as last name &quot;45554&quot; as postal code" time="0"/>
+  <testcase classname="Scenario: Check when user can checkout the product" name="And User see Total Payment &quot;Total: $43.18&quot; on page checkout overview and click finish button" time="0"/>
+  <testcase classname="Scenario: Check when user can checkout the product" name="Then User redirect to checkout complete page" time="0.003">
+    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.complete-headeraaaa&quot;}
+  (Session info: chrome=113.0.5672.92)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:8f7:a74d:f654:3e4d%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.5&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0e6fe4bd6453ce6af1019fa44fb5883c, findElement {using=css selector, value=.complete-headeraaaa}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.92, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: /var/folders/01/0wzchr6x6ld...}, goog:chromeOptions: {debuggerAddress: localhost:50129}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50129/devtoo..., se:cdpVersion: 113.0.5672.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0e6fe4bd6453ce6af1019fa44fb5883c" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.complete-headeraaaa&quot;}
+  (Session info: chrome=113.0.5672.92)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:8f7:a74d:f654:3e4d%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.5&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0e6fe4bd6453ce6af1019fa44fb5883c, findElement {using=css selector, value=.complete-headeraaaa}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.92, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: /var/folders/01/0wzchr6x6ld...}, goog:chromeOptions: {debuggerAddress: localhost:50129}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50129/devtoo..., se:cdpVersion: 113.0.5672.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0e6fe4bd6453ce6af1019fa44fb5883c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy21.isDisplayed(Unknown Source)
+	at org.example.pageObject.CheckoutPage.verifyThankyoupage(CheckoutPage.java:60)
+	at step_definitions.CheckoutSteps.verifyThankyoupage(CheckoutSteps.java:38)
+	at ✽.Then User redirect to checkout complete page(features/Checkout.feature:11)
+</error>
+  </testcase>
+  <testcase classname="Scenario: Check when user can checkout the product" name="Scenario: Check when user can checkout the product" time="0.004">
+    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.complete-headeraaaa&quot;}
+  (Session info: chrome=113.0.5672.92)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:8f7:a74d:f654:3e4d%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.5&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0e6fe4bd6453ce6af1019fa44fb5883c, findElement {using=css selector, value=.complete-headeraaaa}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.92, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: /var/folders/01/0wzchr6x6ld...}, goog:chromeOptions: {debuggerAddress: localhost:50129}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50129/devtoo..., se:cdpVersion: 113.0.5672.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0e6fe4bd6453ce6af1019fa44fb5883c" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.complete-headeraaaa&quot;}
+  (Session info: chrome=113.0.5672.92)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:8f7:a74d:f654:3e4d%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.6.5&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0e6fe4bd6453ce6af1019fa44fb5883c, findElement {using=css selector, value=.complete-headeraaaa}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.92, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: /var/folders/01/0wzchr6x6ld...}, goog:chromeOptions: {debuggerAddress: localhost:50129}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50129/devtoo..., se:cdpVersion: 113.0.5672.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0e6fe4bd6453ce6af1019fa44fb5883c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy21.isDisplayed(Unknown Source)
+	at org.example.pageObject.CheckoutPage.verifyThankyoupage(CheckoutPage.java:60)
+	at step_definitions.CheckoutSteps.verifyThankyoupage(CheckoutSteps.java:38)
+	at ✽.Then User redirect to checkout complete page(features/Checkout.feature:11)
+</error>
+  </testcase>
 </testsuite>

@@ -8,6 +8,7 @@
 #    Then User already on sales page
 
   Scenario Outline: Invalid login
+
     Given User already on website sauce demo
     When User input "<userName>" as userName and input "<passwd>" as password
     Then User see error "<errorText>" on login page

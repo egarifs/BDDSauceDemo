@@ -21,19 +21,16 @@ public class LoginSteps {
         loginPage.setUserName(userName);
         loginPage.setPassword(password);
         loginPage.clickLogin();
-//        Thread.sleep(10000);
-
     }
-
     @Given("User already on website sauce demo")
     public void verifyLandingPage(){
         LoginPage loginPage = new LoginPage(webDriver);
         Assert.assertTrue(loginPage.verifyLandingPage());
     }
-
     @Then("User see error \"(.*)\" on login page")
     public void verifyErrorText(String errorText){
         LoginPage loginPage = new LoginPage(webDriver);
         Assert.assertEquals(errorText, loginPage.verifyErrorText());
     }
+
 }

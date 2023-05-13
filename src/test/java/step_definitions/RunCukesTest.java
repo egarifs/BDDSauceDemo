@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        tags = {"@Login"},//class mana yang akan di jalankan
-        features = {"classpath:features/"}, //package mana class
+        tags = {"@Checkout"},//class mana yang akan di jalankan
+        features = {"classpath:features/"}, //package class
         glue = { "classpath:step_definitions"}, //package folder
         plugin= {"pretty","html:target/site/cucumber-pretty","json:target/cucumber/cucumber.json"}
 )
